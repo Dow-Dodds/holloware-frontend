@@ -16,7 +16,7 @@ const commentsResult = document.getElementById("comments-result");
 let showAllProducts = () => {
   $.ajax({
     type: 'GET',
-    url: "holloware-backend.vercel.app",
+    url: "https://holloware-backend.vercel.app/allProducts",
     //the success function contains an object which can be named anything 
     success: (products) => {
       console.log(products);
@@ -52,7 +52,7 @@ let openCommentModal = (productId) => {
   // Ajax GET to request the individual product via ID
   $.ajax({
     type: 'GET',
-    url: `holloware-backend.vercel.app/${productId}`,
+    url: `holloware-backend.vercel.app/product/${productId}`,
     //the success function contains an object which can be named anything 
     success: (product) => {
       commentsResult.innerHTML = `
